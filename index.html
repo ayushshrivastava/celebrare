@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./Celebrare_logo.png" />
+  <title>Celebrare Canvas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+
+<body>  
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <img src="./Celebrare_logo.png" alt="Celebrare">
+    </div>
+    <div class="header-controls">
+        <button id="undo" class="button">Undo</button>
+      <button id="redo" class="button">Redo</button>
+    </div>
+    <div class="header-controls">
+      
+      <button id="download" class="button">Download</button>
+    </div>
+  </header>
+
+<div class="main">
+  <div class="sidebar">
+    <h3>All Page</h3>
+
+        <div class="page-preview" data-index="0">
+          <img src="/path/to/canvas1-preview.jpg" alt="Canvas 1 Preview">
+        </div>
+        <div class="page-preview" data-index="1">
+          <img src="/path/to/canvas2-preview.jpg" alt="Canvas 2 Preview">
+        </div>
+        <div class="page-preview" data-index="2">
+          <img src="/path/to/canvas3-preview.jpg" alt="Canvas 3 Preview">
+        </div>
+    <button id="editPages" class="button-edit">Customize Pages</button>
+    
+  </div>
+  
+  
+ <!-- Page editing modal -->
+<div id="pageEditingModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Page Editing Options</h2>
+    <div class="rearrange-delete">
+      <h3>Rearrange Pages</h3>
+      <div class="page-list">
+      </div>
+
+    </div>
+    <div class="modal-actions">
+      <button id="addPage" class="button">Add Page</button>
+      <button id="saveChanges" class="button">Save</button>
+      <button id="cancelChanges" class="button">Cancel</button>
+      
+    </div>
+  </div>
+</div>
+
+
+  
+  <div class="container">
+
+     <!-- Toolbar Controls -->
+     <div class="controls">
+        <button id="addText" class="button">Add Text</button>
+        <button id="bold" class="button">Bold</button>
+        <button id="underline" class="button">Underline</button>
+        <button id="uppercase" class="button">Uppercase</button>
+        <button id="lowercase" class="button">Lowercase</button>
+        <input id="textColor" type="color" class="color-picker">
+        <select id="fontSize" class="dropdown">
+          <option value="8">8px</option>
+          <option value="12">12px</option>
+          <option value="16">16px</option>
+          <option value="20">20px</option>
+          <option value="24">24px</option>
+          <option value="28">28px</option>
+          <option value="32">32px</option>
+          <option value="36">36px</option>
+          <option value="40">40px</option>
+        </select>
+        <button id="insertImage" class="button">Insert Image</button>
+      </div>
+
+    
+    <!-- Swiper Canvas -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="canvas" id="canvas1"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="canvas" id="canvas2"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="canvas" id="canvas3"></div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+    
+
+    
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
